@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
-import SearchBar from './SearchBar'
+import SearchBar from '../molecules/SearchBar'
 import NavButton from '../atoms/NavButton'
 import LocationIcon from '../atoms/LocationIcon'
 import UserIcon from '../atoms/UserIcon'
 import CartIcon from '../atoms/CartIcon'
+import MenuIcon from '../atoms/MenuIcon'
+import NavLink from '../atoms/NavLink'
 
 export default function Navbar() {
   return (
-    <nav className="-z-50">
+    <nav className="z-50 sticky top-0">
       <div className="bg-primary-500 h-2" />
       <div className="bg-primary-200 h-24 py-2 px-4 flex justify-center items-center gap-10">
         {/* Logo */}
@@ -46,11 +48,22 @@ export default function Navbar() {
       </div>
 
       {/* Nav links */}
-      <div className="bg-primary-100 h-14 py-2 shadow-gray-200 shadow-md">
-        <NavButton className="md:hidden" icon={<LocationIcon />}>
-          <b>Onde </b>{' '}
-          <span>você está?</span>
-        </NavButton>
+      <div className="bg-primary-100 h-14 py-2 px-4 shadow-md shadow-primary-800/10 flex justify-center items-center w-full">
+        <div className="max-w-6xl flex gap-4 w-full divide-x-2 divide-primary-200">
+          <NavButton icon={<MenuIcon />}>
+            <span className="text-lg font-semibold text-primary-900">Departamentos</span>
+          </NavButton>
+          <NavButton className="md:hidden" icon={<LocationIcon />}>
+            <b>Onde </b>
+            <span>você está?</span>
+          </NavButton>
+          <div className="w-full pl-5 hidden md:flex justify-between items-center">
+            <NavLink className="text-lg font-medium text-primary-900">
+              Descontos Cliente Unimed Natal
+            </NavLink>
+            <NavLink className="text-sm text-primary-800">Venda no Uniclube</NavLink>
+          </div>
+        </div>
       </div>
     </nav>
   )

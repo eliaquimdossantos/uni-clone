@@ -1,9 +1,7 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import Department from "../molecules/Departmet";
+import DepartmentCircleButton from "../molecules/DepartmentCircleButton";
+import UniclubeSwiper from "../molecules/UniclubeSwiper";
 
 const departments = [
   { imgSrc: "/book.webp", name: "Arte, Papelaria e Armarinho" },
@@ -18,26 +16,19 @@ const departments = [
   { imgSrc: "/ticket.webp", name: "Serviços" },
 ];
 
-export default function Departments() {
+export default function DepartmentsCarousel() {
   return (
-    <div className="w-full overflow-x-auto p-2">
-      <Swiper
-        spaceBetween={16}
-        freeMode={true}
-        breakpoints={{
-          320: { slidesPerView: 2 }, // Telas muito pequenas
-          640: { slidesPerView: 4 },   // Telas médias
-          768: { slidesPerView: 5 },   // Telas grandes
-          1024: { slidesPerView: 7 },  // Telas muito grandes
-        }}
-        className="px-4 py-2"
-      >
-        {departments.map((dept, index) => (
-          <SwiperSlide key={index} className="w-auto">
-            <Department imgSrc={dept.imgSrc} name={dept.name} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <UniclubeSwiper
+      id="departments_home"
+      items={departments}
+      renderItem={(dept: { imgSrc: string, name: string }) => <DepartmentCircleButton imgSrc={dept.imgSrc} caption={dept.name} />}
+      slidesPerViewConfig={{
+        '@0.00': { slidesPerView: 3 },
+        '@0.75': { slidesPerView: 5 },
+        '@1.00': { slidesPerView: 6 },
+        '@1.50': { slidesPerView: 8 },
+      }}
+      freeMode={true}
+    />
   );
 }

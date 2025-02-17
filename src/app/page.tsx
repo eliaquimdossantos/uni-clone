@@ -1,8 +1,9 @@
 'use client';
 
-import Navbar from "@/components/molecules/Navbar";
+import Navbar from "@/components/organisms/Navbar";
 import CarouselSection from "@/components/organisms/CarouselSection";
 import DepartmentsSection from "@/components/organisms/DepartmentsSection";
+import DiscountsSection from "@/components/organisms/DiscountsSection";
 import Main from "@/components/organisms/Main";
 
 export default function Home() {
@@ -12,8 +13,7 @@ export default function Home() {
       <Main>
         <CarouselSection />
         <DepartmentsSection />
-        {/* 
-        <PageSection> */}
+        <DiscountsSection />
       </Main>
     </>
   );

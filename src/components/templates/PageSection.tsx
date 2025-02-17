@@ -5,6 +5,7 @@ import clsx from "clsx";
 interface PageSectionProps extends HTMLAttributes<HTMLDivElement> {
   bg?: "primary" | "white" | "transparent";
   bgImage?: string;
+  bgImageRounded?: "sm" | "md" | "lg" | "none";
   className?: string;
   children: ReactNode;
 }
@@ -12,6 +13,7 @@ interface PageSectionProps extends HTMLAttributes<HTMLDivElement> {
 export default function PageSection({
   bg = "transparent",
   bgImage,
+  bgImageRounded = "none",
   children,
   className,
   ...props
@@ -28,7 +30,14 @@ export default function PageSection({
       {...props}
     >
       <div
-        className={twMerge("w-full max-w-5xl gap-8 my-8", className)}
+        className={twMerge(clsx(
+          "w-full max-w-6xl gap-8 my-4", {
+          "rounded-sm": bgImageRounded === "sm",
+          "rounded-md": bgImageRounded === "md",
+          "rounded-lg": bgImageRounded === "lg",
+          "rounded-none": bgImageRounded === "none",
+        }
+        ), className)}
         style={bgImage ? { backgroundImage: `url(${bgImage})` } : {}}
       >
         {children}
