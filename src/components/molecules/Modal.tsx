@@ -8,7 +8,7 @@ type ModalProps = {
 };
 
 const modalOverlay = tv({
-  base: "fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-30 transition-opacity duration-200",
+  base: "fixed mt-40 inset-0 z-50 flex justify-center items-center bg-black bg-opacity-30 ease-in-out transition-opacity duration-200",
   variants: {
     open: {
       true: "opacity-100 visible",
@@ -18,7 +18,7 @@ const modalOverlay = tv({
 });
 
 const modalBox = tv({
-  base: "relative p-4 m-2 w-full z-50 max-w-2xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
+  base: "fixed top-36 left-8 p-4 m-2 w-full z-50 max-w-5xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
   variants: {
     open: {
       true: "scale-100 opacity-100 translate-y-0",
