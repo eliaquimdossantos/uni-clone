@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Uniclube',
   description: 'Plataforma para clube de clientes Unimed',
   icons: {
-    icon: '/favicon.webp'
+    icon: '/favicon.svg'
   }
 };
 
