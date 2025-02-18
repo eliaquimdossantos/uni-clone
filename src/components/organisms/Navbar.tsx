@@ -64,10 +64,12 @@ export default function Navbar() {
               <span>você está?</span>
             </NavButton>
             <div className="w-full pl-5 hidden md:flex justify-between items-center">
-              <NavLink className="text-lg font-medium text-primary-900">
+              <NavLink href="#descontos-cliente-unimed-natal" className="text-lg font-medium text-primary-900">
                 Descontos Cliente Unimed Natal
               </NavLink>
-              <NavLink className="text-sm text-primary-800">Venda no Uniclube</NavLink>
+              <NavLink href="#venda-no-uniclube" className="text-sm text-primary-800">
+                Venda no Uniclube
+              </NavLink>
             </div>
           </div>
         </div>

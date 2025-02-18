@@ -1,5 +1,5 @@
 import React from 'react'
-import ClientDiscountsPrice from './ClientDiscountsPrice'
+import ClientDiscountsPrice from '../molecules/ClientDiscountsPrice'
 import ProductCard from '../molecules/ProdutCard'
 import UniclubeSwiper from '../molecules/UniclubeSwiper'
 
@@ -130,7 +130,7 @@ const products = [
         description={
           <>
             <del className="text-gray-700">R$ 32,90</del>
-            <span className="text-danger">10% OFF</span>
+            <span className="text-red-600">10% OFF</span>
           </>
         }
         price="R$ 14,90"
@@ -172,8 +172,6 @@ const products = [
   },
 ]
 
-// const productsLength = products.length
-
 export default function ClientDiscountsCarousel() {
   return (
     <div className="flex flex-col py-5 px-12 gap-y-10">
@@ -196,7 +194,7 @@ export default function ClientDiscountsCarousel() {
         )}
         slidesClass="!w-auto !flex-none flex flex-row justify-start items-start"
         slidesPerView="auto"
-        spaceBetween={24}
+        spaceBetween={18}
         navigation={true}
       />
     </div>

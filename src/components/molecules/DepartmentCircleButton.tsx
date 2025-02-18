@@ -7,6 +7,6 @@ interface DepartmentCircleButtonProps {
 
 export default function DepartmentCircleButton({ imgSrc, caption }: DepartmentCircleButtonProps) {
   return (
-    <ImageCircleButton imgSrc={imgSrc} caption={caption} />
+    <ImageCircleButton href="#botao-departamento" imgClasses="p-5" imgSrc={imgSrc} caption={caption} />
   )
 }

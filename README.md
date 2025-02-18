@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Uniclube Frontend
 
-## Getting Started
+Este repositório contém uma réplica baseada no frontend do site [Uniclube](https://www.uniclube.com.br), desenvolvido com **Next.js** e **Tailwind CSS**. O projeto segue uma arquitetura baseada no **Atomic Design**, garantindo um código modular, reutilizável e escalável.
 
-First, run the development server:
+![Painel](/assets/uniclube.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para renderização otimizada e melhor performance.
+- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e responsiva.
+- **Atomic Design**: Metodologia para organização de componentes reutilizáveis.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-## Learn More
+- Interface responsiva adaptada para desktop e dispositivos móveis.
+- Componentização otimizada seguindo os princípios do Atomic Design.
+- Estrutura modular para fácil manutenção e escalabilidade.
+- Carregamento eficiente de páginas com Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+## Como Executar o Projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Caso não tenha o Node.js em sua máquina ou não consiga executar, você
+  pode executar o projeto via Docker (necessário ter o docker instalado)
+  siga o [Manual de execução com Docker](DockerREADME.md)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone este repositório:
+   ```sh
+   git clone git@github.com:eliaquimdossantos/uni-clone.git
+   cd uni-clone
+   ```
 
-## Deploy on Vercel
+2. Instale as dependências:
+   ```sh
+   npm install   
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Inicie o servidor desenvolvimento (opção 1):
+   ```sh
+   npm run dev   
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Inicie o servidor produção (opção 2):
+   ```sh
+   npm run start
+   ```
+
+5. Acesse no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+
