@@ -10,12 +10,14 @@ import { useState } from "react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { SwiperOptions } from "swiper/types";
+import ChevronRight from "../atoms/ChevronRight";
+import ChevronLeft from "../atoms/ChevronLeft";
 
 interface UniclubeSwitchProps<T> {
   id: string;
   items: T[];
   renderItem: (item: T, index: number) => React.ReactNode;
-  slidesPerViewConfig?: { [width: number]: SwiperOptions; [ratio: string]: SwiperOptions };
+  slidesPerViewConfig?: { [width: number]: SwiperOptions;[ratio: string]: SwiperOptions };
   slidesPerView?: number | "auto";
   slidesClass?: string;
   spaceBetween?: number;
@@ -63,7 +65,7 @@ export default function UniclubeSwitch<T>({
             id={`prev_${id}`}
             aria-label="Anterior"
           >
-            &#10094;
+            <ChevronLeft />
           </button>
           <button
             className={twMerge(
@@ -74,18 +76,18 @@ export default function UniclubeSwitch<T>({
             id={`next_${id}`}
             aria-label="Próximo"
           >
-            &#10095;
+            <ChevronRight />
           </button>
         </>
       )}
 
       <Swiper
-        modules={[Navigation, Pagination, FreeMode, Autoplay]} // Adicionado Autoplay
+        modules={[Navigation, Pagination, FreeMode, Autoplay]}
         navigation={navigation ? { prevEl: `#prev_${id}`, nextEl: `#next_${id}` } : false}
         pagination={pagination ? { clickable: true } : false}
         freeMode={freeMode}
         loop={loop}
-        autoplay={autoplay ? (typeof autoplay === "boolean" ? { delay: 3000 } : autoplay) : false} // Corrigido autoplay
+        autoplay={autoplay ? (typeof autoplay === "boolean" ? { delay: 3000 } : autoplay) : false}
         spaceBetween={spaceBetween}
         slidesPerView={slidesPerView}
         breakpoints={slidesPerViewConfig}

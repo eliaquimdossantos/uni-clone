@@ -10,8 +10,8 @@ export default function ClientDiscountsPrice({ description, price, paymentWays }
   const paymentsWayLength = useMemo(() => (paymentWays.length), [paymentWays])
 
   return (
-    <div className="flex flex-col">
-      <span className="text-gray-700 text-xs">
+    <div className="flex flex-col text-primary-900">
+      <span className="text-xs">
         {description}
       </span>
       <span className="text-primary-900 text-xl font-black">

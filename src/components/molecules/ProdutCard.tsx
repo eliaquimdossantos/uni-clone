@@ -12,9 +12,9 @@ export default function ProductCard({ imgSrc, children }: ProductCardProps) {
 
   return (
     <div
-    className="w-[12em] h-[24em] bg-white shadow-lg rounded-md overflow-hidden flex flex-col 
+    className="w-[12.5em] h-[23em] bg-white shadow-lg rounded-md overflow-hidden flex flex-col 
     hover:shadow-lg hover:shadow-primary-200 cursor-pointer"
-      onClick={() => router.push('#')}
+      onClick={() => router.push('#card-produto')}
     >
       <div className="relative w-full aspect-square">
         <Image

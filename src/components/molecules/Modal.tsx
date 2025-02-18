@@ -18,7 +18,7 @@ const modalOverlay = tv({
 });
 
 const modalBox = tv({
-  base: "fixed top-36 left-8 w-full z-50 max-w-5xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
+  base: "fixed top-36 w-full mx-2 z-50 xs:max-w-lg sm:max-w-xl md:max-w-3xl xl:max-w-5xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
   variants: {
     open: {
       true: "scale-100 opacity-100 translate-y-0",
@@ -37,7 +37,7 @@ export default function Modal({ open, onClose, children }: ModalProps) {
   return (
     <div className={modalOverlay({ open })} role="dialog" onClick={handleOverlayClick}>
       <div className={modalBox({ open })} onClick={(e) => e.stopPropagation()}>        
-        <div className="max-h-[75vh] overflow-y-auto">{open && children}</div>
+        <div className="max-h-[80vh] overflow-y-auto">{open && children}</div>
       </div>
     </div>
   );
