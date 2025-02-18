@@ -18,7 +18,7 @@ const modalOverlay = tv({
 });
 
 const modalBox = tv({
-  base: "fixed top-36 left-8 p-4 m-2 w-full z-50 max-w-5xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
+  base: "fixed top-36 left-8 w-full z-50 max-w-5xl bg-white rounded-lg transform transition-all duration-200 max-h-[90vh] overflow-hidden",
   variants: {
     open: {
       true: "scale-100 opacity-100 translate-y-0",

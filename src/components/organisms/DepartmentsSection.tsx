@@ -1,6 +1,6 @@
 import React from 'react'
 import PageSection from '../templates/PageSection'
-import Departments from './Departments'
+import Departments from './DepartmentsCarousel'
 
 export default function DepartmentsSection() {
   return (

@@ -24,7 +24,7 @@ export default function SearchBar({ onSearch, className = '' }: SearchBarProps) 
         <input
           type="search"
           id="search"
-          className="block w-full p-4 pl-10 text-md font-medium shadow-md text-gray-900 border border-gray-300 rounded-full"
+          className="block w-full p-4 pl-10 text-md font-medium shadow-md text-primary-900 focus:border focus:border-gray-100 rounded-full"
           placeholder="O que você gostaria hoje?"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

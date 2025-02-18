@@ -7,6 +7,7 @@ import UserIcon from '@/components/atoms/UserIcon'
 import CartIcon from '@/components/atoms/CartIcon'
 import NavLink from '@/components/atoms/NavLink'
 import DepartmentsMenu from '@/components/molecules/DepartmentsMenu'
+import SearchCircleIcon from '../atoms/SearchCircleIcon'
 
 export default function Navbar() {
   return (
@@ -31,8 +32,14 @@ export default function Navbar() {
 
           {/* Botões de navegação */}
           <div className="flex gap-6">
+            {/* Search Button */}
+            <NavButton
+              className="lg:hidden"
+              icon={<SearchCircleIcon />} collapse
+            />
+
             {/* Local */}
-            <NavButton className="hidden md:block" icon={<LocationIcon />} collapse>
+            <NavButton className="hidden lg:block" icon={<LocationIcon />} collapse>
               <span className="font-black">Onde</span><br />
               <span className="font-medium">você está?</span>
             </NavButton>
@@ -65,7 +72,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      
+
     </>
   )
 }
