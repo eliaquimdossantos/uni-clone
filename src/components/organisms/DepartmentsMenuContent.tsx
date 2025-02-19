@@ -6,22 +6,22 @@ import CompaniesCarousel from "./CompaniesCarousel";
 const departments = [
   {
     category: "Saúde e Bem-estar",
-    sessions: ["Beleza", "Cuidados Pessoais", "Esportes e Aventura"],
+    sections: ["Beleza", "Cuidados Pessoais", "Esportes e Aventura"],
     className: "row-span-1"
   },
   {
     category: "Casa",
-    sessions: ["Casa, Jardim e Limpeza", "Móveis e Decoração", "Construção"],
+    sections: ["Casa, Jardim e Limpeza", "Móveis e Decoração", "Construção"],
     className: "row-span-1"
   },
   {
     category: "Estilo",
-    sessions: ["Vestuário", "Calçados", "Bijuterias e Acessórios"],
+    sections: ["Vestuário", "Calçados", "Bijuterias e Acessórios"],
     className: "row-span-1"
   },
   {
     category: "Eletro",
-    sessions: [
+    sections: [
       "Eletrodomésticos",
       "Celulares, Tablets e Acessórios",
       "Câmeras e Acessórios",
@@ -30,17 +30,17 @@ const departments = [
   },
   {
     category: "Ipsum Lorem",
-    sessions: ["Sit Amet", "Consequat", "Pellentesque"],
+    sections: ["Sit Amet", "Consequat", "Pellentesque"],
     className: "row-span-1"
   },
   {
     category: "Tincidunt",
-    sessions: ["Tempor", "Consequat"],
+    sections: ["Tempor", "Consequat"],
     className: "row-span-1"
   },
   {
     category: "Mais Departamentos",
-    sessions: [
+    sections: [
       "Petshop",
       "Produtos Regionais",
       "Brinquedos e Jogos",
@@ -64,13 +64,13 @@ export default function DepartmentsMenu() {
               {department.category}
             </h3>
             <ul className="space-y-1 pl-3">
-              {department.sessions.map((session) => (
-                <li key={session}>
+              {department.sections.map((section) => (
+                <li key={section}>
                   <a
-                    href={`#${session.toLowerCase().replaceAll(' ', '-')}`}
+                    href={`#${section.toLowerCase().replaceAll(' ', '-')}`}
                     className="text-gray-600 hover:text-primary-900/80 transition"
                   >
-                    {session}
+                    {section}
                   </a>
                 </li>
               ))}

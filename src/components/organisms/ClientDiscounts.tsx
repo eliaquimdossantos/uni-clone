@@ -12,7 +12,7 @@ const products = [
         description={
           <>
             <del className="text-gray-700">R$ 32,90</del>
-            <span className="text-danger">10% OFF</span>
+            <span className="text-red-600">10% OFF</span>
           </>
         }
         price="R$ 29,61"
@@ -47,7 +47,7 @@ const products = [
         description={
           <>
             <del className="text-gray-700">R$ 32,90</del>
-            <span className="text-danger">10% OFF</span>
+            <span className="text-red-600">10% OFF</span>
           </>
         }
         price="R$ 14,90"
@@ -95,7 +95,7 @@ const products = [
         description={
           <>
             <del className="text-gray-700">R$ 32,90</del>
-            <span className="text-danger">10% OFF</span>
+            <span className="text-red-600">10% OFF</span>
           </>
         }
         price="R$ 29,61"
