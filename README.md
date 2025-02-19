@@ -1,4 +1,4 @@
-# Uniclube Frontend Clone
+# Uniclube Frontend
 
 Este repositório contém uma réplica baseada no frontend do site [Uniclube](https://www.uniclube.com.br), desenvolvido com **Next.js** e **Tailwind CSS**. O projeto segue uma arquitetura baseada no **Atomic Design**, garantindo um código modular, reutilizável e escalável.
 
@@ -25,8 +25,8 @@ Este repositório contém uma réplica baseada no frontend do site [Uniclube](ht
 
 1. Clone este repositório:
    ```sh
-   git clone https://github.com/seu-usuario/uniclube-clone.git
-   cd uniclube-clone
+   git clone git@github.com:eliaquimdossantos/uni-clone.git
+   cd uni-clone
    ```
 
 2. Instale as dependências:
@@ -34,12 +34,12 @@ Este repositório contém uma réplica baseada no frontend do site [Uniclube](ht
    npm install   
    ```
 
-3. Inicie o servidor de desenvolvimento (opção 1):
+3. Inicie o servidor desenvolvimento (opção 1):
    ```sh
    npm run dev   
    ```
 
-4. Inicie o servidor de desenvolvimento (opção 2):
+4. Inicie o servidor produção (opção 2):
    ```sh
    npm run start
    ```

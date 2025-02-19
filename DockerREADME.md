@@ -45,5 +45,5 @@ docker rm CONTAINER_ID
 Para remover a imagem:
 
 ```sh
-docker rmi okrs-panel
+docker rmi uniclube-frontend
 ```
